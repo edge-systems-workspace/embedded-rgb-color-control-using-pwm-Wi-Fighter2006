@@ -17,14 +17,18 @@
 
 void setup() {
 
-    // STEP 2: Initialize Serial communication
+    // Initialize Serial communication
     Serial.begin(9600);
 
-    // STEP 2: Configure RGB pins as OUTPUT
+    // Configure RGB pins as OUTPUT
     pinMode(RED_PIN, OUTPUT);
     pinMode(GREEN_PIN, OUTPUT);
     pinMode(BLUE_PIN, OUTPUT);
+
+    // STEP 3: Print initialization message
+    Serial.println("RGB LED Controller Initialized!");
 }
+
 
 void loop() {
 }
