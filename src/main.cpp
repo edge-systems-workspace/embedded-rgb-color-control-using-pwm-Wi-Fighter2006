@@ -31,12 +31,35 @@ void setup() {
 void loop() {
 
     // -------- DIGITAL MODE --------
+    digitalWrite(RED_PIN, HIGH);   // Turn ON red
+    delay(1000);
 
-    // STEP 4: Turn ON red LED
-    digitalWrite(RED_PIN, HIGH);
-    delay(1000);  // Keep ON for 1 second
+    digitalWrite(RED_PIN, LOW);    // Turn OFF red
+    delay(1000);
 
-    // STEP 4: Turn OFF red LED
-    digitalWrite(RED_PIN, LOW);
-    delay(1000);  // Keep OFF for 1 second
+    // -------- ANALOG (PWM) MODE --------
+
+    // Set RED brightness (0–255)
+    analogWrite(RED_PIN, 255);   // Full brightness
+    analogWrite(GREEN_PIN, 0);   // OFF
+    analogWrite(BLUE_PIN, 0);    // OFF
+    delay(1000);
+
+    // Yellow color (Red + Green)
+    analogWrite(RED_PIN, 255);
+    analogWrite(GREEN_PIN, 150);
+    analogWrite(BLUE_PIN, 0);
+    delay(1000);
+
+    // Purple color (Red + Blue)
+    analogWrite(RED_PIN, 150);
+    analogWrite(GREEN_PIN, 0);
+    analogWrite(BLUE_PIN, 255);
+    delay(1000);
+
+    // Turn OFF all
+    analogWrite(RED_PIN, 0);
+    analogWrite(GREEN_PIN, 0);
+    analogWrite(BLUE_PIN, 0);
+    delay(1000);
 }
