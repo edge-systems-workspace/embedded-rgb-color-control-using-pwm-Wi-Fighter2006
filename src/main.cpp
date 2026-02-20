@@ -28,7 +28,15 @@ void setup() {
     // STEP 3: Print initialization message
     Serial.println("RGB LED Controller Initialized!");
 }
-
-
 void loop() {
+
+    // -------- DIGITAL MODE --------
+
+    // STEP 4: Turn ON red LED
+    digitalWrite(RED_PIN, HIGH);
+    delay(1000);  // Keep ON for 1 second
+
+    // STEP 4: Turn OFF red LED
+    digitalWrite(RED_PIN, LOW);
+    delay(1000);  // Keep OFF for 1 second
 }
