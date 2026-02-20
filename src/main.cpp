@@ -16,6 +16,14 @@
 #define BLUE_PIN  11    // BLUE connected to pin 11
 
 void setup() {
+
+    // STEP 2: Initialize Serial communication
+    Serial.begin(9600);
+
+    // STEP 2: Configure RGB pins as OUTPUT
+    pinMode(RED_PIN, OUTPUT);
+    pinMode(GREEN_PIN, OUTPUT);
+    pinMode(BLUE_PIN, OUTPUT);
 }
 
 void loop() {
